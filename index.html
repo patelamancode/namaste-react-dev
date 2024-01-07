@@ -6,10 +6,13 @@
     <title>Learning with react dev</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div>Hello  from out of root div</div>
+    <div id="root">
+        <h1>Hello  from html only</h1>
+    </div>
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
 
     <!-- <script>
         const root = document.getElementById("root")
@@ -19,12 +22,7 @@
 
     </script> -->
 
-    <script>
-        const heading = React.createElement("h1", {}, "hello from react") // this heading is react element not a html tag, and this element is js object
-        const root = ReactDOM.createRoot(document.getElementById("root"))
-
-        root.render(heading)// this render menthod convert this heading react element or object to a HTML tag which is render in html dom by doing some internal algo
-    </script>
+    <script type="module" src="App.js"></script>
 </body>
 
 </body>

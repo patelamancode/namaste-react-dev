@@ -27,4 +27,18 @@ dev dependency is only used during development of app while normal dependency us
 *no need to put  that things on github,  which we can regenerate, like node_module
 itis created with help of package and package-lock.json  file, So we need to send these 2 files.
 
-
+Parcel gives super power :
+- create dev  build
+- create local server (localhost:1234)
+- HMR (hot module  replacement) responsible for auto refrese as per change in code.
+- It has FIle watching algorithm (written in c++)
+- Caching - faster build(so reload time in minimized)
+- Image optimization 
+- minification
+- bundling
+- compress
+- consistent hasing
+- code splitting
+- Diffrential Bundling ( to support older browsers )
+- Diagnstics : better error handling view
+----for more check  parcel.org
