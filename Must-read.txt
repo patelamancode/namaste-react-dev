@@ -1,0 +1,6 @@
+#   ust read small small chunks for  code : imp for interview POV
+=======================
+
+1 : Tilde and Caret in package.json file (~ & ^)
+2 : Diffrence between package.json and package-lock.json
+3 : transitive dependency ( reason of having node module while we install npm)

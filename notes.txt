@@ -20,3 +20,11 @@ npm : it is everything  but not a node package manager, it has no full form
 package.json file is configuration of npm. it creates by initializing npm
 
 What is bundler ? it is imp  package (few are webpack, parcel, Vite)
+
+Diffrence between dev dependency and normal dependency
+dev dependency is only used during development of app while normal dependency used in development as well as in production.
+
+*no need to put  that things on github,  which we can regenerate, like node_module
+itis created with help of package and package-lock.json  file, So we need to send these 2 files.
+
+

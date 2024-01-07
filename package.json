@@ -1,0 +1,26 @@
+{
+  "name": "react-01",
+  "version": "1.0.0",
+  "description": "igniting our app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/patelamancode/namaste-react-dev.git"
+  },
+  "keywords": [
+    "learning",
+    "npm"
+  ],
+  "author": "Aman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patelamancode/namaste-react-dev/issues"
+  },
+  "homepage": "https://github.com/patelamancode/namaste-react-dev#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
