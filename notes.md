@@ -53,6 +53,6 @@ Parcel create a dist folder, which shows hosted app over browser by bundling it.
 
 # command for generating dev build by parcel : npx parcel index.html
 
-# command for generating production ready build by parcel : npx build parcel index.html
+# command for generating production build by parcel : npx build parcel index.html
 
 # Browserslist : is used for setting browser compatibilty, it takes params in array
