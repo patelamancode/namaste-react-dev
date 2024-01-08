@@ -1,6 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("h1", {}, "hello from react"); // this heading is react element not a html tag, and this element is js object
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading); // this render menthod convert this heading react element or object to a HTML tag which is render in html dom by doing some internal algo
+// creating react  element normaly with out JSX
+// React.createElemet  => React element i.e (JS-object)  => render as html element
+const normalHeading = React.createElement(
+  "h1",
+  { id: "heading-tag" },
+  "Hey, I am normal react element"
+);
+// ========================================
+//  By using JSX (JSX !==  html) both have similar syntax (also similar syntax of XML)
+// JSX code - transpiled before reaches to JS engine - Parcel transpiled by using - another depency known as Babel- then JS engine understand transpiled react code
+// JSX  => (Transpiled by using Babel) React.createElemet  => React element i.e (JS-object)  => render as html element
+const jsxHeading = <h1 id="heading-jsx">I' m JSX heading of react</h1>;
+
+root.render(jsxHeading);
