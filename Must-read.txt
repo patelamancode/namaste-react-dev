@@ -6,3 +6,5 @@
 3 : transitive dependency ( reason of having node module while we install npm)
 4: consistent hasing  (read)
 5: Read parcel docs : at  parcel.org (it help in system design interviews at sr. level)
+6: Read Babel docs ( how it convert code or transpileit asper requirements)
+7: Home work to read how to write attributes in jsx, multiple  attributes.(like  className, etc)

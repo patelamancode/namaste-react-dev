@@ -11,3 +11,5 @@ we can write or create react element by usning React.createElement(), but it is 
 
 JSX is not javascript, not understood by JS engine. It only understand bby using parcel dependency(behind the scene)
 JSX code - transpiled before reaches to JS engine - Parcel transpiled by using - another depency known as Babel- then JS engine understand transpiled react code
+
+# React component
