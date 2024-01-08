@@ -2953,24 +2953,62 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-// creating react  element normaly with out JSX
-// React.createElemet  => React element i.e (JS-object)  => render as html element
-const normalHeading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading-tag"
-}, "Hey, I am normal react element");
-// ========================================
-//  By using JSX (JSX !==  html) both have similar syntax (also similar syntax of XML)
-// JSX code - transpiled before reaches to JS engine - Parcel transpiled by using - another depency known as Babel- then JS engine understand transpiled react code
+// React Element
 // JSX  => (Transpiled by using Babel) React.createElemet  => React element i.e (JS-object)  => render as html element
 const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     id: "heading-jsx",
     children: "I' m JSX heading of react"
 }, void 0, false, {
     fileName: "App.js",
-    lineNumber: 17,
+    lineNumber: 8,
     columnNumber: 20
 }, undefined);
-root.render(jsxHeading);
+// Creating React Functioneal component
+// (Below things of usin componentt inside componen to render called component-composition)
+const NewComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "I am another component"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 12,
+        columnNumber: 28
+    }, undefined);
+_c = NewComponent;
+const HeadingFuncComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "heading",
+                children: "Hey I am functional component of react"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 15,
+        columnNumber: 5
+    }, undefined);
+};
+_c1 = HeadingFuncComponent;
+// rendering react element
+// root.render(jsxHeading);
+// rendering react  components
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingFuncComponent, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 26,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "NewComponent");
+$RefreshReg$(_c1, "HeadingFuncComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {

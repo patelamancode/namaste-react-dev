@@ -3,17 +3,24 @@ import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// creating react  element normaly with out JSX
-// React.createElemet  => React element i.e (JS-object)  => render as html element
-const normalHeading = React.createElement(
-  "h1",
-  { id: "heading-tag" },
-  "Hey, I am normal react element"
-);
-// ========================================
-//  By using JSX (JSX !==  html) both have similar syntax (also similar syntax of XML)
-// JSX code - transpiled before reaches to JS engine - Parcel transpiled by using - another depency known as Babel- then JS engine understand transpiled react code
+// React Element
 // JSX  => (Transpiled by using Babel) React.createElemet  => React element i.e (JS-object)  => render as html element
 const jsxHeading = <h1 id="heading-jsx">I' m JSX heading of react</h1>;
 
-root.render(jsxHeading);
+// Creating React Functioneal component
+// (Below things of usin componentt inside componen to render called component-composition)
+const NewComponent = () => <h1>I am another component</h1>;
+const HeadingFuncComponent = () => {
+  return (
+    <div id="container">
+      <NewComponent />
+      <h1 className="heading">Hey I am functional component of react</h1>
+    </div>
+  );
+};
+
+// rendering react element
+// root.render(jsxHeading);
+
+// rendering react  components
+root.render(<HeadingFuncComponent />);
