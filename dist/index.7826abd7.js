@@ -2977,9 +2977,15 @@ const HeadingFuncComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "container",
         children: [
+            NewComponent(),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewComponent, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 16,
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -2987,7 +2993,7 @@ const HeadingFuncComponent = ()=>{
                 children: "Hey I am functional component of react"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 17,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined)
         ]
@@ -3003,7 +3009,7 @@ _c1 = HeadingFuncComponent;
 // rendering react  components
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingFuncComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 26,
+    lineNumber: 30,
     columnNumber: 13
 }, undefined));
 var _c, _c1;

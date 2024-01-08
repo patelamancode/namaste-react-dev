@@ -13,7 +13,11 @@ const NewComponent = () => <h1>I am another component</h1>;
 const HeadingFuncComponent = () => {
   return (
     <div id="container">
+      {/* these three things  are same */}
+      {NewComponent()}
       <NewComponent />
+      <NewComponent></NewComponent>
+      {/* till here */}
       <h1 className="heading">Hey I am functional component of react</h1>
     </div>
   );
