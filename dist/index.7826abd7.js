@@ -2953,68 +2953,281 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-// React Element
-// JSX  => (Transpiled by using Babel) React.createElemet  => React element i.e (JS-object)  => render as html element
-const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "heading-jsx",
-    children: "I' m JSX heading of react"
-}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 8,
-    columnNumber: 20
-}, undefined);
-// Creating React Functioneal component
-// (Below things of usin componentt inside componen to render called component-composition)
-const NewComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "I am another component"
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 12,
-        columnNumber: 28
-    }, undefined);
-_c = NewComponent;
-const HeadingFuncComponent = ()=>{
+// Episode 4
+// ==========================
+// creating food ordering app
+// Header
+//  @ Logo
+//  @ link section
+// Body
+//  @ search
+//  @ restro-container
+//   && restro-card
+//    --- restro-img
+//    --- resto-name
+//    --- cuisine
+//    --- rating
+//    --- delivery time
+// Footer
+//  @ coyright
+//  @ contact-info
+//  @ address
+// ==========================
+// building components
+// Styles
+const Restro_container_styles = {
+    backgroundColor: "yellow"
+};
+const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "container",
+        className: "header",
         children: [
-            NewComponent(),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewComponent, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewComponent, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "heading",
-                children: "Hey I am functional component of react"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "app-logo",
+                alt: "app-logo-image",
+                src: "https://cdn.dribbble.com/users/8522921/screenshots/18035105/media/3a9d2448aef379118be3d19801cf2cb2.jpg?resize=400x0"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 21,
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-link",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 43,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 45,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "App.js",
+                    lineNumber: 41,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 15,
+        lineNumber: 34,
         columnNumber: 5
     }, undefined);
 };
-_c1 = HeadingFuncComponent;
-// rendering react element
-// root.render(jsxHeading);
-// rendering react  components
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingFuncComponent, {}, void 0, false, {
+_c = Header;
+// child  components
+const RestroCard = ({ restroName, cuisine, rating, time, restroImage })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "restro-image",
+                alt: "restro-image",
+                src: restroImage
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restroName
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 57,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: cuisine
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 58,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    rating,
+                    " Start"
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 59,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    time,
+                    " mins"
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 60,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 55,
+        columnNumber: 5
+    }, undefined);
+};
+_c1 = RestroCard;
+const RestroContainer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restro-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestroCard, {
+                restroName: "Yummy Kitchen",
+                cuisine: "North Indian, chines",
+                rating: "4",
+                time: "32",
+                restroImage: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_324,c_fill/fw8lo5clwgoywor5xvsv"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 67,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestroCard, {
+                restroName: "Yummy2 Kitchen",
+                cuisine: "North Indian, chines",
+                rating: "4",
+                time: "32",
+                restroImage: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_324,c_fill/fw8lo5clwgoywor5xvsv"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 74,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 66,
+        columnNumber: 5
+    }, undefined);
+};
+_c2 = RestroContainer;
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "search section"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 89,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestroContainer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 90,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 87,
+        columnNumber: 5
+    }, undefined);
+};
+_c3 = Body;
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "footer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "@C Copy Rights"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 98,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "Address"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 99,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "Contact Info"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 100,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 97,
+        columnNumber: 5
+    }, undefined);
+};
+_c4 = Footer;
+const FoodAppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Food-app",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 108,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 109,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 110,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 107,
+        columnNumber: 5
+    }, undefined);
+};
+_c5 = FoodAppLayout;
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodAppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 30,
+    lineNumber: 115,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "NewComponent");
-$RefreshReg$(_c1, "HeadingFuncComponent");
+var _c, _c1, _c2, _c3, _c4, _c5;
+$RefreshReg$(_c, "Header");
+$RefreshReg$(_c1, "RestroCard");
+$RefreshReg$(_c2, "RestroContainer");
+$RefreshReg$(_c3, "Body");
+$RefreshReg$(_c4, "Footer");
+$RefreshReg$(_c5, "FoodAppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {

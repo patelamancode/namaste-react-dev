@@ -8,3 +8,4 @@
 5: Read parcel docs : at  parcel.org (it help in system design interviews at sr. level)
 6: Read Babel docs ( how it convert code or transpileit asper requirements)
 7: Home work to read how to write attributes in jsx, multiple  attributes.(like  className, etc)
+8: Why we don't  prefer index to use as key while iterating list by map()?
